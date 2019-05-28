@@ -42,8 +42,6 @@ public class Main {
 
   // This function constantly prints the local time
 	public static void clock() {
-		int hour = 0;
-		int minute = 0;
 		int second = LocalTime.now().getSecond();
 		int hz = 0;
 		int million = 1_000_000;
@@ -51,10 +49,12 @@ public class Main {
 		while (true) {
 			hz++;
 			if (LocalTime.now().getSecond() != second) {
-				hour = LocalTime.now().getHour();
-				minute = LocalTime.now().getMinute();
 				second = LocalTime.now().getSecond();
-				System.out.printf("%02d:%02d:%02d %f MHz\n", hour, minute, second, Float.valueOf(hz) / million);
+				System.out.printf("%02d:%02d:%02d %f MHz\n",
+													LocalTime.now().getHour(),
+													LocalTime.now().getMinute(),
+													second,
+													Float.valueOf(hz) / million);
 				hz = 0;
 			}
 		}

@@ -12,7 +12,7 @@ public class Main {
 		int turtleCount = 0;
 		System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
-		flipNHeads(1);
+		flipNHeads(3);
 		clock();
 	}
 
@@ -37,20 +37,25 @@ public class Main {
 				count = 0;
 			}
 		}
-		System.out.printf("It took %d flips to flip %d head in a row.\n", totalFlips, count);
+		System.out.printf("It took %d flips to flip %d %s in a row.\n", totalFlips, count, pluralize("head", count));
 	}
 
   // This function constantly prints the local time
 	public static void clock() {
-		int hour;
-		int minute;
+		int hour = 0;
+		int minute = 0;
 		int second = LocalTime.now().getSecond();
+		int hz = 0;
+		int million = 1_000_000;
+		
 		while (true) {
+			hz++;
 			if (LocalTime.now().getSecond() != second) {
 				hour = LocalTime.now().getHour();
 				minute = LocalTime.now().getMinute();
 				second = LocalTime.now().getSecond();
-				System.out.printf("%02d:%02d:%02d\n", hour, minute, second);
+				System.out.printf("%02d:%02d:%02d %f MHz\n", hour, minute, second, Float.valueOf(hz) / million);
+				hz = 0;
 			}
 		}
 	}

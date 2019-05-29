@@ -19,11 +19,11 @@ public class LibraryTest {
     }
 
     @Test public void testContainsDuplicatesTrue() {
-        assertTrue(Library.containsDuplicates(new int[]{1,2,3,4}));
+        assertTrue(Library.containsDuplicates(new int[]{1,2,4,3,4}));
     }
 
     @Test public void testContainsDuplicatesFalse() {
-        assertFalse(Library.containsDuplicates(new int[]{1,2,4,3,4}));
+        assertFalse(Library.containsDuplicates(new int[]{1,2,3,4}));
     }
 
     @Test public void testCalculateAverage() {

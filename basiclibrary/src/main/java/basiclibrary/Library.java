@@ -23,9 +23,9 @@ public class Library {
     public static boolean containsDuplicates(int[] arr) {
         Set<Integer> testSet = new HashSet<Integer>();
         for (int ele: arr) {
-            if (testSet.add(ele) == false) { return false; }
+            if (testSet.add(ele) == false) { return true; }
         }
-        return true;
+        return false;
     }
 
     // This method calculates and returns the average of all values in an array

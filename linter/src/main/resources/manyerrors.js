@@ -1,0 +1,6 @@
+console.log("This is missing a semicolon")
+console.log("This is missing a semicolon")
+console.log("This is missing a semicolon")
+console.log("This is missing a semicolon")
+console.log("This is missing a semicolon")
+console.log("This is missing a semicolon")

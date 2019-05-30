@@ -18,6 +18,8 @@ java-fundamentals
     │   └─── lowestAverage()
     ├── AnalyzeWeather.java
     │   └─── analyzeData()
-    └── Tally.java
-        └─── tally()
+    ├── Tally.java
+    │   └─── tally()
+    ├── Linter.java
+    │   └─── linter()
 ```

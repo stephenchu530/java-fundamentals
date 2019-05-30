@@ -6,14 +6,18 @@
 java-fundamentals
 ├── basics
 │   └── Main.java
-│        ├─── Main()
-│        ├─── pluralize()
-│	 ├─── flipNHeads()
-│	 └─── clock()
+│       ├─── Main()
+│       ├─── pluralize()
+│	├─── flipNHeads()
+│	└─── clock()
 └── basiclibrary
-    └── Library.java
-         ├─── roll()
-	 ├─── containsDuplicates()
-	 ├─── calculateAverage()
-	 └─── lowestAverage()
+    ├── Library.java
+    │   ├─── roll()
+    │   ├─── containsDuplicates()
+    │   ├─── calculateAverage()
+    │   └─── lowestAverage()
+    ├── AnalyzeWeather.java
+    │   └─── analyzeData()
+    └── Tally.java
+        └─── tally()
 ```

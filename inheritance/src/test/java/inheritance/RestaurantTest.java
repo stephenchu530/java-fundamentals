@@ -13,8 +13,8 @@ public class RestaurantTest {
     public void testRestaurantToString() {
         Restaurant restaurant = new Restaurant("Something", 1, 1);
 
-        assertEquals("Should return: Something has 1 of 5 stars and is 1 out of 4 price category.",
-                new String("Something has 1 of 5 stars and is 1 out of 4 price category."),
+        assertEquals("Should return: Something, 0 average stars, 1 price category, 0 reviews.",
+                "Something, 0 average stars, 1 price category, 0 reviews.",
                 restaurant.toString()
         );
     }

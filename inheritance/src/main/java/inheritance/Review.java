@@ -23,4 +23,8 @@ public class Review {
         output.append(this.body);
         return output.toString();
     }
+
+    public int getStars() {
+        return this.stars;
+    }
 }

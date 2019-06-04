@@ -1,9 +1,12 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class Restaurant {
     private String name;
     private int stars;
     private int priceCategory;
+    private ArrayList<Review> Reviews;
 
     public Restaurant(String name, int stars, int priceCategory) {
         this.name = name;
@@ -28,5 +31,12 @@ public class Restaurant {
         output.append(" out of 4 price category.");
 
         return output.toString();
+    }
+
+    private class Review {
+        private String body;
+        private String author;
+        private int stars;
+
     }
 }

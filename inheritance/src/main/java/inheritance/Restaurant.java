@@ -1,6 +1,5 @@
 package inheritance;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -9,12 +8,10 @@ public class Restaurant {
     private int priceCategory;
     private ArrayList<Review> reviews;
 
-    public Restaurant(String name, int stars, int priceCategory) {
+    public Restaurant(String name, int priceCategory) {
         this.name = name;
 
-        if (stars < 0) stars = 0;
-        if (stars > 5) stars = 5;
-        this.stars = stars;
+        this.stars = 0;
 
         if (priceCategory < 1) priceCategory = 1;
         if (priceCategory > 4) priceCategory = 4;
@@ -29,7 +26,7 @@ public class Restaurant {
 
         output.append(this.name);
         output.append(", ");
-        output.append(this.averageStars());
+        output.append(this.stars);
         output.append(" average stars, ");
         output.append(this.priceCategory);
         output.append(" price category, ");
@@ -47,5 +44,12 @@ public class Restaurant {
         }
         if (sum == 0) return 0;
         return sum / this.reviews.size();
+    }
+
+    public void addReview(Review review) {
+        if (!this.reviews.contains(review)) {
+            this.reviews.add(review);
+            this.stars = this.averageStars();
+        }
     }
 }

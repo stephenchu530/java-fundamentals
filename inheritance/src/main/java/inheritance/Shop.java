@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 public class Shop {
     private String name;
+    private String description;
     private int priceCategory;
     private int averageStars;
     private int subTotalStars;
     private int numberOfReviews;
     private ArrayList<Review> reviews;
 
-    public Shop(String name, int priceCategory) {
+    public Shop(String name, String description, int priceCategory) {
         this.name = name;
+        this.description = description;
         this.priceCategory = priceCategory;
         this.averageStars = 0;
         this.subTotalStars = 0;
@@ -28,10 +30,11 @@ public class Shop {
 
         output.append(this.name);
         output.append(", ");
+        output.append(this.description);
+        output.append(", ");
         output.append(this.averageStars);
-        output.append(" average stars, ");
+        output.append(", ");
         output.append(this.priceCategory);
-        output.append(" price category");
 
         return output.toString();
     }

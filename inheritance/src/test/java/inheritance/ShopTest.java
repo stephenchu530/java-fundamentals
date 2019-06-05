@@ -12,7 +12,7 @@ public class ShopTest {
 
     @Before
     public void setUpBasicShop() {
-        this.basicShop = new Shop("Basic Shop", 2);
+        this.basicShop = new Shop("Basic Shop", "Best shop in town", 2);
     }
 
     @Before
@@ -27,8 +27,8 @@ public class ShopTest {
 
     @Test
     public void testShopToString() {
-        assertEquals("Should print out: Basic Shop, 0 average stars, 2 price category ",
-                "Basic Shop, 0 average stars, 2 price category",
+        assertEquals("Should print out: Basic Shop, Best shop in town, 0, 2",
+                "Basic Shop, Best shop in town, 0, 2",
                 this.basicShop.toString()
         );
     }
@@ -59,6 +59,10 @@ public class ShopTest {
         assertEquals("Should have average star rating of 2",
                 2,
                 this.basicShop.getAvgStar()
+        );
+        assertEquals("Should print out: Basic Shop, Best shop in town, 2, 2",
+                "Basic Shop, Best shop in town, 2, 2",
+                this.basicShop.toString()
         );
     }
 }

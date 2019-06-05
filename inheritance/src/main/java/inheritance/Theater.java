@@ -71,6 +71,20 @@ public class Theater {
             this.movie = movie;
         }
 
-        public String getMovie() { return this.movie; }
+        @Override
+        public String toString() {
+            StringBuilder output = new StringBuilder();
+
+            output.append(this.getBody());
+            output.append(", ");
+            output.append (this.getAuthor());
+            output.append(", ");
+            output.append(this.getStars());
+            if (this.movie != "") {
+                output.append(", ");
+                output.append(this.movie);
+            }
+            return output.toString();
+        }
     }
 }

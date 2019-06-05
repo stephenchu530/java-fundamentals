@@ -24,6 +24,8 @@ public class Review {
         return output.toString();
     }
 
+    public String getBody() { return this.body; }
+    public String getAuthor() { return this.author; }
     public int getStars() {
         return this.stars;
     }

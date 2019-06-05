@@ -32,6 +32,12 @@ public class TheaterTest {
     }
 
     @Test
+    public void testInstanceTheaterReviews() {
+        this.basicTheater.addReview(new Theater.TheaterReview("This is a sample review", "Not a real person", 3));
+        this.basicTheater.addReview(new Theater.TheaterReview("This is a sample review with a movie title", "Not a real person", 3, "Best Movie Evar"));
+    }
+
+    @Test
     public void testAddReview() {
         this.basicTheater.addReview(this.reviews[0]);
         assertEquals("Should have average star rating of 4",

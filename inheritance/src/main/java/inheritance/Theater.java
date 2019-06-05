@@ -32,7 +32,11 @@ public class Theater {
     }
 
     public void removeMovie(String movie) {
-        this.movies.remove(movie);
+        boolean removed = this.movies.remove(movie);
+
+        if (!removed) {
+            throw new IllegalArgumentException("Not a legit movie!");
+        }
     }
 
     public void addReview(TheaterReview review) {

@@ -90,5 +90,22 @@ public class TheaterTest {
         );
     }
 
+    @Test
+    public void testRemoveMoviesGood() {
+        this.basicTheater.addMovie("Movie Title 1");
+        this.basicTheater.addMovie("Some Other Bad Movie");
+        this.basicTheater.removeMovie("Movie Title 1");
+        assertEquals("Should print out: Basic Theater, 0, 2, Some Other Bad Movie",
+                "Basic Theater, 0, 2, Some Other Bad Movie",
+                this.basicTheater.toString()
+        );
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testRemoveMoviesBad() {
+        this.basicTheater.addMovie("Movie Title 1");
+        this.basicTheater.addMovie("Some Other Bad Movie");
+        this.basicTheater.removeMovie("BAD MOVIE THAT CAUSES AN EXCEPTION");
+    }
 
 }

@@ -25,4 +25,6 @@ java-fundamentals
 ├── inheritance
 │   ├─── Restuarant.java
 │   ├─── Review.java
+│   ├─── Shop.java
+│   ├─── Theater.java
 ```

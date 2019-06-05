@@ -33,8 +33,14 @@ public class TheaterTest {
 
     @Test
     public void testInstanceTheaterReviews() {
+        int previousNumber = this.basicTheater.getNumberOfReviews();
         this.basicTheater.addReview(new Theater.TheaterReview("This is a sample review", "Not a real person", 3));
+        assertTrue("Should have incremented up by 1",
+                previousNumber == this.basicTheater.getNumberOfReviews() - 1);
+        previousNumber++;
         this.basicTheater.addReview(new Theater.TheaterReview("This is a sample review with a movie title", "Not a real person", 3, "Best Movie Evar"));
+        assertTrue("Should have incremented up by 1",
+                previousNumber == this.basicTheater.getNumberOfReviews() - 1);
     }
 
     @Test

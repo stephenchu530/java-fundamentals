@@ -42,6 +42,10 @@ public class Theater {
         this.averageStars = this.subTotalStars / this.numberOfReviews;
     }
 
+    public int getNumberOfReviews() {
+        return numberOfReviews;
+    }
+
     public String toString() {
         StringBuilder output = new StringBuilder();
 
